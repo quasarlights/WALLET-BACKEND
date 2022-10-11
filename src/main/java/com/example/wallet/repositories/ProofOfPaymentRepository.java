@@ -1,4 +1,7 @@
 package com.example.wallet.repositories;
 
-public class ProofOfPaymentRepository {
+import com.example.wallet.models.ProofOfPayment;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ProofOfPaymentRepository extends JpaRepository<ProofOfPayment, Long> {
 }

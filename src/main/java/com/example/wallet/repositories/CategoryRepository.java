@@ -5,7 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.ArrayList;
 
-public class CategoryRepository //extends JpaRepository<Category, Long>
+public interface CategoryRepository extends JpaRepository<Category, Long>
  {
 
 }

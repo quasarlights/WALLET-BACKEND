@@ -23,8 +23,8 @@ public class ItemService implements IitemService {
 
     @Override
     public ArrayList<Item> getItem() {
-        ArrayList<Item> itemList= (ArrayList<Item>) itemRepository.findAll();
-        return itemList;
+        ArrayList<Item> itemArrayList= (ArrayList<Item>) itemRepository.findAll();
+        return itemArrayList;
     }
 
     public void saveItem(Item item){

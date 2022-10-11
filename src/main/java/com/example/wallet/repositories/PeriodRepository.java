@@ -1,4 +1,7 @@
 package com.example.wallet.repositories;
 
-public class PeriodRepository {
+import com.example.wallet.models.Period;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface PeriodRepository extends JpaRepository<Period,Long> {
 }
