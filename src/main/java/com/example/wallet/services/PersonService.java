@@ -5,9 +5,11 @@ import com.example.wallet.models.Item;
 import com.example.wallet.models.Person;
 import com.example.wallet.repositories.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 
+@Service
 public class PersonService implements IPersonService {
 
     @Autowired

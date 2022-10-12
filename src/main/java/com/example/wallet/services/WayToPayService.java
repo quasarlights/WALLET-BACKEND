@@ -4,9 +4,11 @@ import com.example.wallet.interfaces.IWayToPayService;
 import com.example.wallet.models.WayToPay;
 import com.example.wallet.repositories.WayToPayRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 
+@Service
 public class WayToPayService implements IWayToPayService {
 
     @Autowired

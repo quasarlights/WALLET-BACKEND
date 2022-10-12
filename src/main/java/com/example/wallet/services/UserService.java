@@ -4,9 +4,11 @@ import com.example.wallet.interfaces.IUserService;
 import com.example.wallet.models.User;
 import com.example.wallet.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 
+@Service
 public class UserService implements IUserService {
 
     @Autowired

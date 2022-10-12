@@ -4,9 +4,11 @@ import com.example.wallet.interfaces.IPaymentService;
 import com.example.wallet.models.Payment;
 import com.example.wallet.repositories.PaymentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 
+@Service
 public class PaymentService implements IPaymentService {
 
     @Autowired

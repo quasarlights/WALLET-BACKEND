@@ -50,6 +50,7 @@ public class Item {
     private Category category;
 
     public Item() {}
+
 @JsonCreator
     public Item(@JsonProperty("id")Long id, @JsonProperty("name")String name, 
             @JsonProperty("description")String description, 

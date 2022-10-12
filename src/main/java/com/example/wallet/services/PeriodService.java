@@ -4,9 +4,11 @@ import com.example.wallet.interfaces.IPeriodService;
 import com.example.wallet.models.Period;
 import com.example.wallet.repositories.PeriodRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 
+@Service
 public class PeriodService implements IPeriodService {
     @Autowired
     PeriodRepository periodRepository;
