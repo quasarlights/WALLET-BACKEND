@@ -30,8 +30,9 @@ public class WayToPayService implements IWayToPayService {
     }
 
     @Override
-    public void saveWayToPay(WayToPay wayToPay) {
+    public WayToPay saveWayToPay(WayToPay wayToPay) {
     wayToPayRepository.save(wayToPay);
+        return wayToPay;
     }
 
     @Override

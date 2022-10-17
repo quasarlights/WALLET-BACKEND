@@ -23,7 +23,7 @@ public class Payment {
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     private WayToPay wayToPay;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+   @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "proofOfPayment_id", nullable = false)
     @OnDelete(action = OnDeleteAction.NO_ACTION)
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})

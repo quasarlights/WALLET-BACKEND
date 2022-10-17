@@ -28,8 +28,9 @@ public class ProofOfPaymentService implements IProofOfPaymentService {
     }
 
     @Override
-    public void saveProofOfPayment(ProofOfPayment proofOfPayment) {
+    public ProofOfPayment saveProofOfPayment(ProofOfPayment proofOfPayment) {
     proofOfPaymentRepository.save(proofOfPayment);
+        return proofOfPayment;
     }
 
     @Override

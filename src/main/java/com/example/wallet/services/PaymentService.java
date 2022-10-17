@@ -28,8 +28,9 @@ public class PaymentService implements IPaymentService {
     }
 
     @Override
-    public void savePayment(Payment payment) {
+    public Payment savePayment(Payment payment) {
         paymentRepository.save(payment);
+        return payment;
     }
 
     @Override

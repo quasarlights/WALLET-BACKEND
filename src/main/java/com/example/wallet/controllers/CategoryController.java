@@ -3,9 +3,13 @@ package com.example.wallet.controllers;
 import com.example.wallet.models.Category;
 import com.example.wallet.services.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
+
+import static org.springframework.http.HttpStatus.*;
 
 @RestController
 @RequestMapping("/api")
@@ -30,17 +34,33 @@ public class CategoryController {
 
     //UPDATE
     @PutMapping("/category/update/{id}")
-    public Category udateCategory(@PathVariable Long id,
-                                    @RequestParam String newName){
+    public ResponseEntity<Category> updateCategory(@PathVariable("id") Long id,
+                                    @RequestBody Category newCategory){
 
         Category category= categoryService.findCategory(id);
-        category.setName(newName);
+        newCategory.setId(category.getId());
 
-        return category;
+        return new ResponseEntity<>(categoryService.save(newCategory),HttpStatus.OK);
     }
+/*
+     @PutMapping("/{id}")
+    public ResponseEntity<Person> updateEducation(@PathVariable("id") long id, @RequestBody Person personRequest) {
 
+        Person person = personService.findById(id);
+        personRequest.setId(person.getId());
+        // .orElseThrow(() -> new ResourceNotFoundException("EducationId " + id + "not found"));
+
+        // .orElseThrow(() -> new ResourceNotFoundException("EducationId " + id + "not found"));
+        return new ResponseEntity<>(personService.save(personRequest), HttpStatus.OK);
+
+    }
+*/
 
     //DELETE
-
+@DeleteMapping("/category/delete/{id}")
+    public String deleteCategory(@PathVariable("id") Long id){
+    categoryService.deleteCategory(id);
+    return "Category Deleted";
+}
 
 }

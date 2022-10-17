@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public interface IProofOfPaymentService {
 
     public ArrayList<ProofOfPayment> getProofOfPayment();
-    public void saveProofOfPayment(ProofOfPayment proofOfPayment);
+    public ProofOfPayment saveProofOfPayment(ProofOfPayment proofOfPayment);
     public void deleteProofOfPayment(Long id);
     public ProofOfPayment findProofOfPayment(Long id);
 }
